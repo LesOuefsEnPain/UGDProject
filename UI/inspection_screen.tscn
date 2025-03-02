@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0o53pixr3ww7"]
+
+[ext_resource type="Script" path="res://Scripts/inspection_screen.gd" id="1_86q6e"]
+[ext_resource type="Texture2D" uid="uid://dxbrwl5l5s4w" path="res://UI/Assets/vignette.png" id="1_xvrqv"]
+
+[node name="InspectionScreen" type="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_86q6e")
+
+[node name="Back" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.607843)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Vignette" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xvrqv")
+expand_mode = 5
+
+[node name="ItemTitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.43316
+anchor_top = 0.0108025
+anchor_right = 0.582465
+anchor_bottom = 0.151235
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 66
+text = "TITLE"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemDesc" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.257813
+anchor_top = 0.850309
+anchor_right = 0.736111
+anchor_bottom = 0.925927
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.724643, 0.724643, 0.724643, 1)
+theme_override_font_sizes/font_size = 35
+text = "The item description will go here"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemImage" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.291667
+anchor_top = 0.226852
+anchor_right = 0.72309
+anchor_bottom = 0.768519
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+metadata/_edit_use_anchors_ = true

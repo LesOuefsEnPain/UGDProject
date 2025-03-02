@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://qdfu5job2rvo"]
+
+[ext_resource type="PackedScene" uid="uid://b6gu0v5l03o03" path="res://cecilia.tscn" id="2_6o8jp"]
+[ext_resource type="PackedScene" uid="uid://d0o53pixr3ww7" path="res://UI/inspection_screen.tscn" id="3_blbiu"]
+[ext_resource type="PackedScene" uid="uid://dt4wuh61jwlwe" path="res://Objects/ceciliabedroom.tscn" id="4_bj21y"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xhgav"]
+
+[sub_resource type="Sky" id="Sky_jb4t4"]
+sky_material = SubResource("ProceduralSkyMaterial_xhgav")
+
+[sub_resource type="Environment" id="Environment_dp225"]
+background_mode = 1
+background_color = Color(0.758192, 0.758192, 0.758192, 1)
+sky = SubResource("Sky_jb4t4")
+ambient_light_color = Color(0.556953, 0.556953, 0.556953, 1)
+tonemap_mode = 1
+ssr_enabled = true
+ssao_enabled = true
+ssao_radius = 5.0
+ssil_enabled = true
+ssil_radius = 7.0
+ssil_intensity = 2.0
+
+[node name="FirstScene" type="Node3D"]
+
+[node name="ceciliabedroom" parent="." instance=ExtResource("4_bj21y")]
+transform = Transform3D(-3.19093e-07, 0, 7.3, 0, 7.3, 0, -7.3, 0, -3.19093e-07, 0, 0, 0)
+
+[node name="Cecilia" parent="." instance=ExtResource("2_6o8jp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07819, 1.48758, -1.25988)
+SPEED = 14.0
+JUMP_VELOCITY = 15.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dp225")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85553, 10.4595)
+light_energy = 4.0
+shadow_enabled = true
+distance_fade_enabled = true
+omni_range = 239.305
+
+[node name="InspectionScreen" parent="." instance=ExtResource("3_blbiu")]

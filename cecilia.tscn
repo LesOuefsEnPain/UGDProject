@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6gu0v5l03o03"]
+
+[ext_resource type="Script" path="res://Scripts/character_body_3d.gd" id="1_gf4yn"]
+[ext_resource type="SpriteFrames" uid="uid://dn7ertmgcqrei" path="res://Sprites/cecilia/ceciliasprite.tres" id="2_uslen"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ylso5"]
+radius = 2.15034
+height = 14.5772
+
+[node name="Cecilia" type="CharacterBody3D" groups=["cec"]]
+collision_layer = 2
+script = ExtResource("1_gf4yn")
+JUMP_VELOCITY = 9.0
+
+[node name="ceciliasprite" type="AnimatedSprite3D" parent="."]
+billboard = 2
+texture_filter = 0
+sprite_frames = ExtResource("2_uslen")
+animation = &"walk_right"
+
+[node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.872879, 0.487936, 0, -0.487936, 0.872879, 0, 4.71036, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Pivot"]
+spring_length = 10.0
+
+[node name="Camera3D" type="Camera3D" parent="Pivot/SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 10)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.241186, -0.68836, 0)
+shape = SubResource("CapsuleShape3D_ylso5")

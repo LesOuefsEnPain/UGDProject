@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cchxtfsvqy5cr"]
+
+[ext_resource type="Script" path="res://Scripts/interactive_object.gd" id="1_f20w7"]
+[ext_resource type="Texture2D" uid="uid://bbg6rsmojxysi" path="res://UI/Assets/keyboard_key_e.png" id="2_5gvu0"]
+
+[node name="InteractiveObject" type="Area3D"]
+collision_mask = 2
+script = ExtResource("1_f20w7")
+
+[node name="keyinstruction" type="Sprite3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0, 0)
+billboard = 1
+render_priority = 127
+texture = ExtResource("2_5gvu0")
+
+[connection signal="body_entered" from="." to="." method="detect_enter"]
+[connection signal="body_exited" from="." to="." method="detect_exit"]
