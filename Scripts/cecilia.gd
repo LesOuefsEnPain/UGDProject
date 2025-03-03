@@ -1,3 +1,5 @@
+#hii saihaan i hope you get this or else im gonna be super sad bc why am i so bad at this </3
+
 extends CharacterBody3D
 
 
