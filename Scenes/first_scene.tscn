@@ -36,8 +36,8 @@ JUMP_VELOCITY = 15.0
 environment = SubResource("Environment_dp225")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85553, 10.4595)
-light_energy = 2.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.7697, 10.4595)
+light_energy = 10.0
 shadow_enabled = true
 distance_fade_enabled = true
 omni_range = 239.305
