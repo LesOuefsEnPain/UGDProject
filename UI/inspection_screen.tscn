@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d0o53pixr3ww7"]
 
-[ext_resource type="Script" path="res://Scripts/inspection_screen.gd" id="1_86q6e"]
+[ext_resource type="Script" uid="uid://iscygs44cnyc" path="res://Scripts/inspection_screen.gd" id="1_86q6e"]
 [ext_resource type="Texture2D" uid="uid://dxbrwl5l5s4w" path="res://UI/Assets/vignette.png" id="1_xvrqv"]
 
 [node name="InspectionScreen" type="Control"]
