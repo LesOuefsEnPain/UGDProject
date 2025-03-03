@@ -2,11 +2,14 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvwo3axe70d7f"
+uid="uid://jp4at5ufgye7"
 path.s3tc="res://.godot/imported/TEXTURED-Chandelier_GameClub_Model_3 Base Color.png-b436bf857f2b79548bc6696c2c90057d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
+}
+generator_parameters={
+"md5": "d317388a18f479a6f3c70ebf00153fe7"
 }
 
 [deps]

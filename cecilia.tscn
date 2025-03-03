@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6gu0v5l03o03"]
 
-[ext_resource type="Script" uid="uid://bn1entd8fw8is" path="res://Scripts/cecilia.gd" id="1_gf4yn"]
+[ext_resource type="Script" path="res://Scripts/cecilia.gd" id="1_gf4yn"]
 [ext_resource type="SpriteFrames" uid="uid://dn7ertmgcqrei" path="res://Sprites/cecilia/ceciliasprite.tres" id="2_uslen"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ylso5"]
