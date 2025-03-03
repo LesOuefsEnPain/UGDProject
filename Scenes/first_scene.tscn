@@ -29,15 +29,20 @@ transform = Transform3D(-3.19093e-07, 0, 7.3, 0, 7.3, 0, -7.3, 0, -3.19093e-07, 
 
 [node name="Cecilia" parent="." instance=ExtResource("2_6o8jp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07819, 1.48758, -1.25988)
+<<<<<<< HEAD
 SPEED = 14.0
+JUMP_VELOCITY = 10.0
+=======
+SPEED = 30.0
 JUMP_VELOCITY = 15.0
+>>>>>>> parent of 6aeebf4 (mar 3 411)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dp225")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.7697, 10.4595)
-light_energy = 3.0
+light_energy = 10.0
 shadow_enabled = true
 distance_fade_enabled = true
 omni_range = 239.305
