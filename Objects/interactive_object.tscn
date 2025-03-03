@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cchxtfsvqy5cr"]
 
-[ext_resource type="Script" path="res://Scripts/interactive_object.gd" id="1_f20w7"]
+[ext_resource type="Script" uid="uid://dym1jjxvpc6v3" path="res://Scripts/interactive_object.gd" id="1_f20w7"]
 [ext_resource type="Texture2D" uid="uid://bbg6rsmojxysi" path="res://UI/Assets/keyboard_key_e.png" id="2_5gvu0"]
 
 [node name="InteractiveObject" type="Area3D"]

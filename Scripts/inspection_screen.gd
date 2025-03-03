@@ -10,6 +10,8 @@ func _ready() -> void:
 	titlelabel = $ItemTitle
 	desclabel = $ItemDesc
 	imageobj = $ItemImage
+	
+	modulate = Color(1, 1, 1, 0)
 	pass # Replace with function body.
 	
 func open_screen(title: String, desc: String, tex: Texture2D):
