@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 #hii saihaan i hope you get this or else im gonna be super sad bc why am i so bad at this </3
-=======
 #warda if u can see ts ur cool and u got it correctly!!!!
->>>>>>> 0c6114ad9c69e3042403a31650be566d9e21e730
 
 extends CharacterBody3D
 
