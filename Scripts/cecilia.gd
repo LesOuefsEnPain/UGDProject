@@ -11,8 +11,17 @@ var side = "_forward"
 
 var direction: Vector3
 
+var camspring: SpringArm3D
+var pivot: Node3D
+var cam: Camera3D
+var camlpos: Vector3
+
 func _ready() -> void:
 	cecsprite = $ceciliasprite
+	cam = $Pivot/SpringArm3D/Camera3D
+	camlpos = cam.position
+	camspring = $Pivot/SpringArm3D
+	pivot = $Pivot
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -66,3 +75,21 @@ func _input(event: InputEvent) -> void:
 			motion = "walk"
 			side = "_left"
 	pass
+	
+func cam_interpolate(newgpos: Vector3):
+	camspring.remove_child(cam)
+	pivot.add_child(cam)
+	var tween = get_tree().create_tween()
+	var rtween = get_tree().create_tween()
+	tween.tween_property(cam, "global_position", newgpos, 1)
+	rtween.tween_property(cam, "rotation_degrees", Vector3(0, 90, 30), 1)
+	
+func cam_deinterpolate():
+	var tween = get_tree().create_tween()
+	var rtween = get_tree().create_tween()
+	var wait = get_tree().create_timer(1)
+	tween.tween_property(cam, "position", camlpos, 1)
+	rtween.tween_property(cam, "rotation_degrees", Vector3(0, 0, 0), 1)
+	await wait.timeout
+	pivot.remove_child(cam)
+	camspring.add_child(cam)

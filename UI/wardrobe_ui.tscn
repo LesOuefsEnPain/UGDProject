@@ -1,0 +1,129 @@
+[gd_scene load_steps=5 format=3 uid="uid://x3p5ip3lx58a"]
+
+[ext_resource type="Script" uid="uid://ct0ovk8ljfxas" path="res://UI/wardrobe_ui.gd" id="1_vricd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ludi7"]
+bg_color = Color(0.74978, 0.74978, 0.74978, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vricd"]
+bg_color = Color(0.971893, 0.62422, 0.81002, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cesb"]
+bg_color = Color(0.542046, 0.777047, 0.979197, 1)
+
+[node name="WardrobeUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vricd")
+
+[node name="BackL" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0199653
+anchor_top = 0.0138889
+anchor_right = 0.107639
+anchor_bottom = 0.112654
+theme_override_font_sizes/font_size = 46
+text = "[Esc]"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.367188
+anchor_top = 0.058642
+anchor_right = 0.431424
+anchor_bottom = 0.927469
+theme_override_styles/focus = SubResource("StyleBoxFlat_ludi7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ludi7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ludi7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ludi7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ludi7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.486111
+anchor_top = 0.0648148
+anchor_right = 0.550347
+anchor_bottom = 0.910494
+theme_override_styles/focus = SubResource("StyleBoxFlat_vricd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_vricd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vricd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vricd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vricd")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.605035
+anchor_top = 0.0632716
+anchor_right = 0.669271
+anchor_bottom = 0.896605
+theme_override_styles/focus = SubResource("StyleBoxFlat_2cesb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2cesb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2cesb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2cesb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cesb")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = 349.0
+offset_right = 279.0
+offset_bottom = 575.0
+color = Color(0.89059, 0.89059, 0.89059, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 857.0
+offset_top = 130.0
+offset_right = 1112.0
+offset_bottom = 356.0
+color = Color(0.958782, 0.701243, 0.89867, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 25.0
+offset_top = 96.0
+offset_right = 280.0
+offset_bottom = 322.0
+color = Color(0.721709, 0.869022, 0.98995, 1)
+
+[node name="Detection1" type="Control" parent="."]
+anchors_preset = 0
+anchor_left = 0.373264
+anchor_top = 0.0632716
+anchor_right = 0.425347
+anchor_bottom = 0.919753
+metadata/_edit_use_anchors_ = true
+
+[node name="Detection2" type="Control" parent="."]
+anchors_preset = 0
+anchor_left = 0.491319
+anchor_top = 0.0617284
+anchor_right = 0.543403
+anchor_bottom = 0.91821
+metadata/_edit_use_anchors_ = true
+
+[node name="Detection3" type="Control" parent="."]
+anchors_preset = 0
+anchor_left = 0.611111
+anchor_top = 0.0601852
+anchor_right = 0.663194
+anchor_bottom = 0.916667
+metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="Detection1" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Detection1" to="." method="_on_button_mouse_exited"]
+[connection signal="mouse_entered" from="Detection2" to="." method="_on_button_2_mouse_entered"]
+[connection signal="mouse_exited" from="Detection2" to="." method="_on_button_2_mouse_exited"]
+[connection signal="mouse_entered" from="Detection3" to="." method="_on_button_3_mouse_entered"]
+[connection signal="mouse_exited" from="Detection3" to="." method="_on_button_3_mouse_exited"]
