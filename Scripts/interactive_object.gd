@@ -2,11 +2,12 @@ extends Area3D
 
 var keysprite: Sprite3D
 var is_player_in = false
-var is_letter_open = false
+var is_interacted = false
 
 @export var itemname = ""
 @export var itemdesc = ""
 @export var itemimage: Texture2D
+@export var id: String = ""
 
 var inspscreen: Control
 
@@ -23,12 +24,20 @@ func _process(delta: float) -> void:
 	pass
 
 func _input(event: InputEvent) -> void:
-	if (event.is_action("interact") and is_player_in):
-		is_letter_open = true
-		inspscreen.open_screen(itemname, itemdesc, itemimage)
-	elif (event.is_action("close") and is_letter_open):
-		is_letter_open = false
-		inspscreen.close_screen()
+	if (event.is_action("interact") and is_player_in and !is_interacted):
+		if id == "wdrobe":
+			is_interacted = true
+			get_parent().open_w()
+		else:
+			is_interacted = true
+			inspscreen.open_screen(itemname, itemdesc, itemimage)
+	elif (event.is_action("close") and is_interacted):
+		if id == "wdrobe":
+			is_interacted = false
+			get_parent().close_w()
+		else:
+			is_interacted = false
+			inspscreen.close_screen()
 	pass
 
 func detect_enter(body: Node3D):
