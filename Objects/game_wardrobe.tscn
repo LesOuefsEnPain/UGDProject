@@ -225,22 +225,6 @@ size = Vector3(2.4328, 4.57025, 2.25086)
 [sub_resource type="BoxShape3D" id="BoxShape3D_opabt"]
 size = Vector3(0.77301, 4.57025, 2.14822)
 
-[sub_resource type="Animation" id="Animation_opabt"]
-resource_name = "wardrobe_open"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Cube_003:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 1.73311, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_gqnh4"]
 length = 0.001
 tracks/0/type = "value"
@@ -270,6 +254,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 1.73311, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_opabt"]
+resource_name = "wardrobe_open"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube_003:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.73311, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wm05w"]
