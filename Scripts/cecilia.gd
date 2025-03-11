@@ -16,12 +16,17 @@ var pivot: Node3D
 var cam: Camera3D
 var camlpos: Vector3
 
+var inv: Inventory
+
+var testitem = preload("res://Objects/test_item.tscn")
+
 func _ready() -> void:
 	cecsprite = $ceciliasprite
 	cam = $Pivot/SpringArm3D/Camera3D
 	camlpos = cam.position
 	camspring = $Pivot/SpringArm3D
 	pivot = $Pivot
+	inv = $Inventory
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -41,9 +46,15 @@ func _physics_process(delta: float) -> void:
 	if (!cecsprite.is_playing()):
 		cecsprite.play()
 	if (side == "_forward"):
+		cecsprite.offset.x = 0
 		cecsprite.scale = Vector3(1.15, 1.15, 1.15)
 		cecsprite.position.y = 1
+	elif (side == "_left"):
+		cecsprite.offset.x = 150
+		cecsprite.scale = Vector3(1, 1, 1)
+		cecsprite.position.y = 0
 	else:
+		cecsprite.offset.x = 0
 		cecsprite.scale = Vector3(1, 1, 1)
 		cecsprite.position.y = 0
 		
@@ -74,6 +85,11 @@ func _input(event: InputEvent) -> void:
 			direction.z = 0
 			motion = "walk"
 			side = "_left"
+	if Input.is_action_just_pressed("debug"):
+		var ti: invitem = testitem.instantiate()
+		inv.add_item(ti)
+	if Input.is_action_just_pressed("debug2"):
+		inv.remove_item(inv.equippeditem)
 	pass
 	
 func cam_interpolate(newgpos: Vector3):

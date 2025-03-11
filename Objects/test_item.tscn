@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://hi4hp3rgswi5"]
+
+[ext_resource type="Script" uid="uid://rm0bd3wl6eq1" path="res://Scripts/inv_item.gd" id="1_lfvxm"]
+[ext_resource type="Texture2D" uid="uid://dyaf7rx8jktr7" path="res://Sprites/kdokja.png" id="2_56ky3"]
+
+[node name="TestItem" type="Node3D"]
+script = ExtResource("1_lfvxm")
+idname = "Kim Dokja"
+itemtex = ExtResource("2_56ky3")
+metadata/_custom_type_script = "uid://rm0bd3wl6eq1"
