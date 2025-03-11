@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6gu0v5l03o03"]
+[gd_scene load_steps=5 format=3 uid="uid://b6gu0v5l03o03"]
 
 [ext_resource type="Script" uid="uid://c8dtqxwg7kdm3" path="res://Scripts/cecilia.gd" id="1_gf4yn"]
 [ext_resource type="SpriteFrames" uid="uid://dn7ertmgcqrei" path="res://Sprites/cecilia/ceciliasprite.tres" id="2_uslen"]
+[ext_resource type="PackedScene" uid="uid://ctydj4dejrkvr" path="res://UI/inventory.tscn" id="3_l70nn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ylso5"]
 radius = 2.15034
@@ -11,6 +12,11 @@ height = 14.5772
 collision_layer = 2
 script = ExtResource("1_gf4yn")
 JUMP_VELOCITY = 9.0
+
+[node name="ItemSprite" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15648, -0.445638, 0)
+billboard = 2
+render_priority = 1
 
 [node name="ceciliasprite" type="AnimatedSprite3D" parent="."]
 billboard = 2
@@ -30,3 +36,5 @@ transform = Transform3D(1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 10
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.241186, -0.68836, 0)
 shape = SubResource("CapsuleShape3D_ylso5")
+
+[node name="Inventory" parent="." instance=ExtResource("3_l70nn")]

@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctydj4dejrkvr"]
+
+[ext_resource type="Script" uid="uid://prcqmhyolalu" path="res://Scripts/inventory.gd" id="1_23vm5"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_23vm5")
+metadata/_custom_type_script = "uid://prcqmhyolalu"
+
+[node name="CurrentItem" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.809896
+anchor_top = 0.850309
+anchor_right = 0.999132
+anchor_bottom = 1.0
+theme_override_font_sizes/font_size = 31
+text = "Empty"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AllItems" type="ItemList" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.801215
+anchor_top = 0.611111
+anchor_right = 0.973958
+anchor_bottom = 0.978395
+metadata/_edit_use_anchors_ = true
