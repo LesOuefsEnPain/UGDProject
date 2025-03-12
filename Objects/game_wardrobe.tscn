@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=4 uid="uid://c12gvoo0fnv7h"]
+[gd_scene load_steps=20 format=4 uid="uid://c12gvoo0fnv7h"]
 
 [ext_resource type="Script" uid="uid://dhv6ni0ut7j8d" path="res://Scripts/game_wardrobe.gd" id="1_3hgqk"]
 [ext_resource type="Texture2D" uid="uid://bj53sjembs3ig" path="res://Models/ceciliabedroom/Game_Wardrobe_newtex.png" id="1_opabt"]
 [ext_resource type="PackedScene" uid="uid://cchxtfsvqy5cr" path="res://Objects/interactive_object.tscn" id="2_gqnh4"]
+[ext_resource type="PackedScene" uid="uid://bwrfgbj1tspub" path="res://Models/ceciliabedroom/Hangers.glb" id="4_p168d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wggyf"]
 resource_name = "Material.008"
@@ -311,6 +312,9 @@ id = "wdrobe"
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="InteractiveObject"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.306189, 0.256682, 0.0350876)
 shape = SubResource("BoxShape3D_opabt")
+
+[node name="Hangers" parent="." instance=ExtResource("4_p168d")]
+transform = Transform3D(0.305, 0, 0, 0, 0.305, 0, 0, 0, 0.305, 0, 1.48037, 0)
 
 [node name="animp" type="AnimationPlayer" parent="."]
 libraries = {

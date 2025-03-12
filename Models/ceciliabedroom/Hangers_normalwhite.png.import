@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://kt8cgwcnw1ju"
+path.s3tc="res://.godot/imported/Hangers_normalwhite.png-5434628838a8d44db52a63d26275c735.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "c00443c68d43a76312263bdaeb46acbb"
+}
+
+[deps]
+
+source_file="res://Models/ceciliabedroom/Hangers_normalwhite.png"
+dest_files=["res://.godot/imported/Hangers_normalwhite.png-5434628838a8d44db52a63d26275c735.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://Models/ceciliabedroom/Hangers_normalwhite.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
