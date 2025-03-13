@@ -85,11 +85,15 @@ func _input(event: InputEvent) -> void:
 			direction.z = 0
 			motion = "walk"
 			side = "_left"
+			
+	#temporary testing code - to be removed later
 	if Input.is_action_just_pressed("debug"):
 		var ti: invitem = testitem.instantiate()
 		inv.add_item(ti)
 	if Input.is_action_just_pressed("debug2"):
 		inv.remove_item(inv.equippeditem)
+	if Input.is_action_just_pressed("debug3"):
+		inv.add_space(2)
 	pass
 	
 func cam_interpolate(newgpos: Vector3):

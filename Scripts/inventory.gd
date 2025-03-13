@@ -17,7 +17,7 @@ func _ready() -> void:
 	listitem = $AllItems
 	currentitemtext = $CurrentItem
 	equip_item(equippeditem)
-	setup_list()
+	setup_list(invsize)
 	pass
 	
 func _process(delta: float) -> void:
@@ -48,12 +48,18 @@ func equip_item(idx: int):
 	itemspr_ref.texture = invarr[equippeditem].itemtex
 	currentitemtext.text = str(equippeditem + 1) + ". " + invarr[equippeditem].idname
 
-func setup_list():
-	var loopvar = 1
-	for x: invitem in invarr:
-		listitem.add_item(str(loopvar) + ". " + x.idname)
+func setup_list(num: int):
+	var loopvar = listitem.item_count+1
+	for x: int in num:
+		listitem.add_item(str(loopvar) + ". " + invarr[loopvar-1].idname)
 		loopvar+=1
 		
+func add_space(addsize: int):
+	invsize += 2
+	for x: int in addsize:
+		invarr.append(invitem.new())
+	setup_list(addsize)
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("showinvlist"):
 		if (!islistopen):
