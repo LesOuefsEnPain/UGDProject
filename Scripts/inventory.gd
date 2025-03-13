@@ -86,4 +86,13 @@ func _input(event: InputEvent) -> void:
 		equip_item(3)
 	elif Input.is_action_just_pressed("inv5"):
 		equip_item(4)
+	elif Input.is_action_just_pressed("use_item"):
+		var player = get_tree().get_first_node_in_group("cec")
+		player.add_child(invarr[equippeditem])
+		
+		var result: bool = invarr[equippeditem].use_item()
+		if result:
+			remove_item(equippeditem)
+		else:
+			player.remove_child(invarr[equippeditem])
 	pass

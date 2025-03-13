@@ -27,3 +27,6 @@ func close_w():
 	animplayer.play("wardrobe_close")
 	get_tree().get_first_node_in_group("cec").cam_deinterpolate()
 	wardrobe_ui_inst.queue_free()
+	
+func destroy_interactability():
+	$InteractiveObject.queue_free()

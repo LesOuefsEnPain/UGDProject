@@ -8,6 +8,10 @@ var panel1: ColorRect
 var panel2: ColorRect
 var panel3: ColorRect
 
+var bluedress = preload("res://Objects/bluedress.tscn")
+var pinkdress = preload("res://Objects/pinkdress.tscn")
+var whitedress = preload("res://Objects/whitedress.tscn")
+
 func _ready() -> void:
 	panel1 = $ColorRect
 	panel2 = $ColorRect2
@@ -60,4 +64,33 @@ func _on_button_3_mouse_entered() -> void:
 func _on_button_3_mouse_exited() -> void:
 	canmove3 = false
 	panel3.visible = false
+	pass # Replace with function body.
+	
+func handle_wardrobe():
+	var wdrobe = get_tree().get_first_node_in_group("wardrobe")
+	wdrobe.destroy_interactability()
+	wdrobe.close_w()
+
+
+func _on_button_3_pressed() -> void:
+	var inventoryobj: Inventory = get_tree().get_first_node_in_group("inventory")
+	var bd: dressinv = bluedress.instantiate()
+	inventoryobj.add_item(bd)
+	handle_wardrobe()
+	pass # Replace with function body.
+
+
+func _on_button_2_pressed() -> void:
+	var inventoryobj: Inventory = get_tree().get_first_node_in_group("inventory")
+	var pd: dressinv = pinkdress.instantiate()
+	inventoryobj.add_item(pd)
+	handle_wardrobe()
+	pass # Replace with function body.
+
+
+func _on_button_pressed() -> void:
+	var inventoryobj: Inventory = get_tree().get_first_node_in_group("inventory")
+	var wd: dressinv = whitedress.instantiate()
+	inventoryobj.add_item(wd)
+	handle_wardrobe()
 	pass # Replace with function body.
