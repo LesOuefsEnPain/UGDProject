@@ -31,48 +31,6 @@ theme_override_font_sizes/font_size = 46
 text = "[Esc]"
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.382813
-anchor_top = 0.0524691
-anchor_right = 0.479167
-anchor_bottom = 1.00154
-theme_override_styles/focus = SubResource("StyleBoxFlat_ludi7")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ludi7")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ludi7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ludi7")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ludi7")
-metadata/_edit_use_anchors_ = true
-
-[node name="Button2" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.484375
-anchor_top = 0.00462963
-anchor_right = 0.552951
-anchor_bottom = 0.992284
-theme_override_styles/focus = SubResource("StyleBoxFlat_vricd")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_vricd")
-theme_override_styles/hover = SubResource("StyleBoxFlat_vricd")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vricd")
-theme_override_styles/normal = SubResource("StyleBoxFlat_vricd")
-metadata/_edit_use_anchors_ = true
-
-[node name="Button3" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.559896
-anchor_top = 0.0648148
-anchor_right = 0.645833
-anchor_bottom = 1.00154
-theme_override_styles/focus = SubResource("StyleBoxFlat_2cesb")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2cesb")
-theme_override_styles/hover = SubResource("StyleBoxFlat_2cesb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_2cesb")
-theme_override_styles/normal = SubResource("StyleBoxFlat_2cesb")
-metadata/_edit_use_anchors_ = true
-
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
 layout_mode = 0
@@ -100,33 +58,53 @@ offset_right = 280.0
 offset_bottom = 322.0
 color = Color(0.721709, 0.869022, 0.98995, 1)
 
-[node name="Detection1" type="Control" parent="."]
+[node name="Button" type="Button" parent="."]
 layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.382813
-anchor_top = 0.0540123
-anchor_right = 0.478299
-anchor_bottom = 0.989198
+anchor_right = 0.479167
+anchor_bottom = 1.00154
+theme_override_styles/focus = SubResource("StyleBoxFlat_ludi7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ludi7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ludi7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ludi7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ludi7")
 metadata/_edit_use_anchors_ = true
 
-[node name="Detection2" type="Control" parent="."]
+[node name="Button2" type="Button" parent="."]
 layout_mode = 1
-anchor_left = 0.486979
+anchors_preset = -1
+anchor_left = 0.478299
+anchor_top = 0.00462963
+anchor_right = 0.563368
+anchor_bottom = 0.992284
+theme_override_styles/focus = SubResource("StyleBoxFlat_vricd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_vricd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vricd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vricd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vricd")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.559896
 anchor_top = 0.00154321
-anchor_right = 0.551215
-anchor_bottom = 0.99537
+anchor_right = 0.645833
+anchor_bottom = 1.00154
+theme_override_styles/focus = SubResource("StyleBoxFlat_2cesb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2cesb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2cesb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2cesb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cesb")
 metadata/_edit_use_anchors_ = true
 
-[node name="Detection3" type="Control" parent="."]
-layout_mode = 1
-anchor_left = 0.560764
-anchor_top = 0.0570988
-anchor_right = 0.647569
-anchor_bottom = 0.990741
-metadata/_edit_use_anchors_ = true
-
-[connection signal="mouse_entered" from="Detection1" to="." method="_on_button_mouse_entered"]
-[connection signal="mouse_exited" from="Detection1" to="." method="_on_button_mouse_exited"]
-[connection signal="mouse_entered" from="Detection2" to="." method="_on_button_2_mouse_entered"]
-[connection signal="mouse_exited" from="Detection2" to="." method="_on_button_2_mouse_exited"]
-[connection signal="mouse_entered" from="Detection3" to="." method="_on_button_3_mouse_entered"]
-[connection signal="mouse_exited" from="Detection3" to="." method="_on_button_3_mouse_exited"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Button2" to="." method="_on_button_2_mouse_entered"]
+[connection signal="mouse_exited" from="Button2" to="." method="_on_button_2_mouse_exited"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="mouse_entered" from="Button3" to="." method="_on_button_3_mouse_entered"]
+[connection signal="mouse_exited" from="Button3" to="." method="_on_button_3_mouse_exited"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

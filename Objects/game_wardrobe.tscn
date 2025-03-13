@@ -280,7 +280,7 @@ _data = {
 &"wardrobe_open": SubResource("Animation_opabt")
 }
 
-[node name="Game_Wardrobe" type="StaticBody3D"]
+[node name="Game_Wardrobe" type="StaticBody3D" groups=["wardrobe"]]
 script = ExtResource("1_3hgqk")
 
 [node name="Cube" type="MeshInstance3D" parent="."]
@@ -314,7 +314,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.306189, 0.256682, 0.035087
 shape = SubResource("BoxShape3D_opabt")
 
 [node name="Hangers" parent="." instance=ExtResource("4_p168d")]
-transform = Transform3D(0.305, 0, 0, 0, 0.305, 0, 0, 0, 0.305, 0, 1.48037, 0)
+transform = Transform3D(0.305, 0, 0, 0, 0.305, 0, 0, 0, 0.305, 0, 2, 0)
 
 [node name="animp" type="AnimationPlayer" parent="."]
 libraries = {
