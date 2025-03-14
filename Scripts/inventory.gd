@@ -86,6 +86,10 @@ func _input(event: InputEvent) -> void:
 		equip_item(3)
 	elif Input.is_action_just_pressed("inv5"):
 		equip_item(4)
+	elif Input.is_action_just_pressed("inv6") and invsize > 5:
+		equip_item(5)
+	elif Input.is_action_just_pressed("inv7") and invsize > 6:
+		equip_item(6)
 	elif Input.is_action_just_pressed("use_item"):
 		var player = get_tree().get_first_node_in_group("cec")
 		player.add_child(invarr[equippeditem])
