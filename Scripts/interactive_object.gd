@@ -15,7 +15,7 @@ var inspscreen: Control
 func _ready() -> void:
 	keysprite = $keyinstruction
 	keysprite.visible = false
-	inspscreen = get_tree().root.get_child(2).get_node("InspectionScreen")
+	inspscreen = get_tree().root.get_child(GlobalSingleton.scene_node_idx).get_node("InspectionScreen")
 	pass # Replace with function body.
 
 

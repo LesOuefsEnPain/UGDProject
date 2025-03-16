@@ -3,6 +3,7 @@ extends Node
 #global variables here
 var can_player_move = true
 
+var scene_node_idx: int = 2
 var ginventory: Array[invitem] = [invitem.new(), invitem.new(), invitem.new(), invitem.new(), invitem.new()]
 var ginvsize = 5
 
