@@ -18,7 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalSingleton="*res://Scripts/global_singleton.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dialogic]
 
@@ -51,7 +51,7 @@ text/autopauses={}
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [filesystem]
 
