@@ -10,7 +10,7 @@ func check_inv(n: String, q: int) -> bool:
 	var player_inv: Inventory = get_tree().get_first_node_in_group("cec").get_node("Inventory")
 	return player_inv.check_inventory(n, q)
 
-func check_equipped(n: String) -> bool:
+func check_eq(n: String) -> bool:
 	var player_inv: Inventory = get_tree().get_first_node_in_group("cec").get_node("Inventory")
 	return player_inv.check_equipped(n)
 

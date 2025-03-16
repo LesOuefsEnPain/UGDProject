@@ -1,9 +1,11 @@
-[gd_scene load_steps=20 format=4 uid="uid://c12gvoo0fnv7h"]
+[gd_scene load_steps=25 format=4 uid="uid://c12gvoo0fnv7h"]
 
 [ext_resource type="Script" uid="uid://dhv6ni0ut7j8d" path="res://Scripts/game_wardrobe.gd" id="1_3hgqk"]
 [ext_resource type="Texture2D" uid="uid://bj53sjembs3ig" path="res://Models/ceciliabedroom/Game_Wardrobe_newtex.png" id="1_opabt"]
 [ext_resource type="PackedScene" uid="uid://cchxtfsvqy5cr" path="res://Objects/interactive_object.tscn" id="2_gqnh4"]
 [ext_resource type="PackedScene" uid="uid://bwrfgbj1tspub" path="res://Models/ceciliabedroom/Hangers.glb" id="4_p168d"]
+[ext_resource type="Texture2D" uid="uid://hynahb2tvtcw" path="res://Models/ceciliabedroom/Hangers_albedowhite.png" id="5_a34sp"]
+[ext_resource type="Texture2D" uid="uid://kt8cgwcnw1ju" path="res://Models/ceciliabedroom/Hangers_normalwhite.png" id="6_bt43t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wggyf"]
 resource_name = "Material.008"
@@ -226,6 +228,49 @@ size = Vector3(2.4328, 4.57025, 2.25086)
 [sub_resource type="BoxShape3D" id="BoxShape3D_opabt"]
 size = Vector3(0.77301, 4.57025, 2.14822)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_63lnt"]
+resource_name = "Material.005"
+cull_mode = 2
+albedo_texture = ExtResource("5_a34sp")
+roughness = 0.5
+emission_enabled = true
+emission = Color(0.281187, 0.281187, 0.281187, 1)
+emission_energy_multiplier = 0.9
+normal_enabled = true
+normal_texture = ExtResource("6_bt43t")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_88svg"]
+_surfaces = [{
+"aabb": AABB(-1.06046, -1, -1.53446, 2.10498, 8.47155, 2.86646),
+"format": 34896613377,
+"index_count": 108,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYACAAJAAoACAALAAkADAAKAAkACwAMAAkADQAIAAoACwAIAA0ADAAOAAoADQAKAA4ACwAPAAwACwANAA8ADwAOAAwADwANAA4AEAARABIAEAATABEAFAASABEAEwAUABEAFQAQABIAEwAQABUAFAAWABIAFQASABYAEwAXABQAEwAVABcAFwAWABQAFwAVABYA"),
+"name": "Material.005",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("WgcAAFjiAABaB288uy8AAFoHbzxY4gAAWgcAALsvAACU+m88uy8AAJT6AABY4gAAlPpvPFjiAACU+gAAuy8AAMQM+HD//wAAxAz//2FNAADEDP////8AAMQM+HBhTQAA/////2FNAAD///hw//8AAP///////wAA///4cGFNAAAAAGM3nbIAAAAAX8gAAAAAAABfyJ2yAAAAAGM3AAAAADrzX8gAAAAAOvNjN52yAAA681/InbIAADrzYzcAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kq1ys"]
+resource_name = "Hangers_Cube_025"
+_surfaces = [{
+"aabb": AABB(-1.06046, -1, -1.53446, 2.10498, 8.47155, 2.86646),
+"attribute_data": PackedByteArray("atQ+1pOrFf+Tqz7WatQV/2rUk6uTq2rUk6uTq2rUatRq1OmAk6vAqZOr6YBq1MCpatQ+VpOrFX+Tqz5WatQVf2rUa1STq5QratSUK5Ora1TAKc446QD3D8Ap9w/pAM446QCiOsApSJvpAEibwCmiOpQrojprVEiblCtIm2tUojo+VqI6FX9Imz5WSJsVf6I66YCiOsCpSJvpgEibwKmiOhX/Ff8+1j7WFf8+1j7WFf8Vf844Plb3DxV/9w8+Vs446QAbncApFf/pABX/wCkbnZQrG51rVBX/lCsV/2tUG50+VhudFX8V/z5WFf8Vfxud6YAbncCpFf/pgBX/wKkbnRX/atQ+1pOrFf+Tqz7WatQV/8CpPtbpgBX/6YA+1sCp"),
+"format": 34896613399,
+"index_count": 108,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUA"),
+"material": SubResource("StandardMaterial3D_63lnt"),
+"name": "Material.005",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 72,
+"vertex_data": PackedByteArray("WgcAAFjiVNVaB288uy9U1VoHbzxY4lTVWgcAALsvVNVaBwAAuy///5T6bzy7L///WgdvPLsv//+U+gAAuy///5T6AAC7L1TVlPpvPFjiVNWU+m88uy9U1ZT6AABY4lTVlPoAAFji/79aB288WOL/v5T6bzxY4v+/WgcAAFji/79aBwAAuy9U1ZT6AABY4lTVlPoAALsvVNVaBwAAWOJU1ZT6bzy7L1TVWgdvPFjiVNVaB288uy9U1ZT6bzxY4lTVxAz4cP/////EDP//YU3//8QM////////xAz4cGFN///EDPhwYU3///////9hTf//xAz//2FN//////hwYU3/////+HBhTf//////////////////YU3/////+HD////////4cP/////EDP//////////////////xAz4cP/////EDPhwYU1U1f//+HD//1TV///4cGFNVNXEDPhw//9U1f////9hTVTVxAz/////VNXEDP//YU1U1f///////1TVAABjN52y//8AAF/IAAD//wAAX8idsv//AABjNwAA//8AAGM3AAD//zrzX8gAAP//AABfyAAA//8682M3AAD//zrzYzcAAP//OvNfyJ2y//8681/IAAD//zrzYzedsv//OvNjN52y//8AAF/InbL//zrzX8idsv//AABjN52y//8AAGM3AABU1TrzYzedslTVOvNjNwAAVNUAAGM3nbJU1TrzX8gAAFTVAABfyJ2yVNUAAF/IAABU1TrzX8idslTVVFWqqlRVqqpUVaqqVFWqqv+//z//v/8//7//P/8//7+qqlRVqqpUVaqqVFWqqlRV/3//f/9//3//f/9//3//f1RVVFVUVVRVVFVUVVRVVFVU1aoqVNWqKlTVqipU1aoq/z//f/8//3//P/9//z//f////3////9/////f////3//v/9//7//f/+//3//v/9//3//f/9//3//f/9//3//f1RVVFVUVVRVVFVUVVRVVFVU1aoqVNWqKlTVqipU1aoq/z//f/8//3//P/9//z//f////3////9/////f////3//v/9//7//f/+//3//v/9//3//f/9//3//f/9//3//f1VVVFVVVVRVVVVUVVRVVFVU1aoqVNWqKlTVqipU1aoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_88svg")
+
 [sub_resource type="Animation" id="Animation_gqnh4"]
 length = 0.001
 tracks/0/type = "value"
@@ -316,7 +361,12 @@ shape = SubResource("BoxShape3D_opabt")
 [node name="Hangers" parent="." instance=ExtResource("4_p168d")]
 transform = Transform3D(0.305, 0, 0, 0, 0.305, 0, 0, 0, 0.305, 0, 2, 0)
 
+[node name="Cube_002" parent="Hangers" index="1"]
+mesh = SubResource("ArrayMesh_kq1ys")
+
 [node name="animp" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_wm05w")
 }
+
+[editable path="Hangers"]

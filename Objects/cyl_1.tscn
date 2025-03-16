@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://blspmforccca1"]
+
+[sub_resource type="GDScript" id="GDScript_shday"]
+resource_name = "cyl1"
+script/source = "extends StaticBody3D
+
+func _on_detection_body_entered(body: Node3D) -> void:
+	if body.is_in_group(\"cec\"):
+		pass
+	pass # Replace with function body.
+"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_shday"]
+albedo_color = Color(0.616248, 0.612836, 0.970118, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g8wsk"]
+material = SubResource("StandardMaterial3D_shday")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8ys08"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rasw2"]
+radius = 0.593961
+
+[node name="Cyl1" type="StaticBody3D"]
+script = SubResource("GDScript_shday")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_g8wsk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_8ys08")
+
+[node name="Detection" type="Area3D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Detection"]
+shape = SubResource("CapsuleShape3D_rasw2")
+
+[connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
