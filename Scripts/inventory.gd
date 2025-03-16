@@ -75,6 +75,16 @@ func check_inventory(id: String, qnt: int) -> bool:
 		return true
 	else:
 		return false
+		
+func verify_item_existence(idx: int):
+		var player = get_tree().get_first_node_in_group("cec")
+		player.add_child(invarr[idx])
+		
+		var result: bool = invarr[idx].use_item()
+		if result:
+			remove_item(idx)
+		else:
+			player.remove_child(invarr[idx])
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("showinvlist"):
@@ -107,12 +117,5 @@ func _input(event: InputEvent) -> void:
 	elif Input.is_action_just_pressed("inv7") and invsize > 6:
 		equip_item(6)
 	elif Input.is_action_just_pressed("use_item"):
-		var player = get_tree().get_first_node_in_group("cec")
-		player.add_child(invarr[equippeditem])
-		
-		var result: bool = invarr[equippeditem].use_item()
-		if result:
-			remove_item(equippeditem)
-		else:
-			player.remove_child(invarr[equippeditem])
+		verify_item_existence(equippeditem)
 	pass

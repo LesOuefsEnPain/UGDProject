@@ -7,4 +7,8 @@ class_name invitem
 @export var uses: int = -1
 
 func use_item() -> bool:
-	return false
+	uses -= 1
+	if uses == 0:
+		return true
+	else:
+		return false

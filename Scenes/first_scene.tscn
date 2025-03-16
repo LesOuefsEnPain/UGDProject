@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://qdfu5job2rvo"]
+[gd_scene load_steps=9 format=3 uid="uid://qdfu5job2rvo"]
 
 [ext_resource type="PackedScene" uid="uid://b6gu0v5l03o03" path="res://cecilia.tscn" id="2_6o8jp"]
 [ext_resource type="PackedScene" uid="uid://d0o53pixr3ww7" path="res://UI/inspection_screen.tscn" id="3_blbiu"]
 [ext_resource type="PackedScene" uid="uid://dt4wuh61jwlwe" path="res://Objects/ceciliabedroom.tscn" id="4_bj21y"]
+[ext_resource type="PackedScene" uid="uid://blspmforccca1" path="res://Objects/cyl_1.tscn" id="4_pilgx"]
+[ext_resource type="PackedScene" uid="uid://bt6150gxs4e86" path="res://Objects/cyl2.tscn" id="5_eh6ij"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xhgav"]
 
@@ -48,3 +50,9 @@ distance_fade_enabled = true
 omni_range = 239.305
 
 [node name="InspectionScreen" parent="." instance=ExtResource("3_blbiu")]
+
+[node name="Cyl1" parent="." instance=ExtResource("4_pilgx")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -10.9392, -7.88742, 18.8164)
+
+[node name="cyl2" parent="." instance=ExtResource("5_eh6ij")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 10.1191, -7.88742, 18.8164)

@@ -7,4 +7,5 @@
 script = ExtResource("1_lfvxm")
 idname = "Kim Dokja"
 itemtex = ExtResource("2_56ky3")
+uses = 1
 metadata/_custom_type_script = "uid://rm0bd3wl6eq1"
