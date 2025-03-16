@@ -59,6 +59,22 @@ func add_space(addsize: int):
 	for x: int in addsize:
 		invarr.append(invitem.new())
 	setup_list(addsize)
+	
+func check_equipped(id: String) -> bool:
+	if invarr[equippeditem].idname == id:
+		return true
+	else:
+		return false
+		
+func check_inventory(id: String, qnt: int) -> bool:
+	var amnt: int = 0
+	for item in invarr:
+		if item.idname == id:
+			amnt+=1
+	if amnt >= qnt:
+		return true
+	else:
+		return false
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("showinvlist"):

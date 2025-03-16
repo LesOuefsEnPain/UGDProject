@@ -20,7 +20,7 @@ func open_w():
 	wardrobe_ui_inst = wardrobe_ui.instantiate()
 	var timer = get_tree().create_timer(1)
 	await timer.timeout
-	get_tree().root.get_child(1).add_child(wardrobe_ui_inst)
+	get_tree().root.get_child(2).add_child(wardrobe_ui_inst)
 	
 func close_w():
 	GlobalSingleton.can_player_move = true
