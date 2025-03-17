@@ -1,0 +1,51 @@
+~ cylinder1
+
+Cecilia: Hello!
+if GlobalSingleton.has_met_cyl1 == false
+	Cylinder1: [[Hi! | Howdy! | Hello!]] You have to give me kim dokja to talk to my brother
+	set GlobalSingleton.has_met_cyl1 = true
+elif GlobalSingleton.has_met_cyl1 == true
+	if GlobalSingleton.given_dokja == true
+		Cylinder1: Why r u even here ur done w me go to my brother
+		=> END
+	if GlobalSingleton.check_eq("Kim Dokja") == true
+		Cylinder1: Ok you have kim dokja, wanna give it to me
+		- Give Kim Dokja
+			Cylinder1: Hehe thank you 
+			do GlobalSingleton.use_eq_item() 
+			set GlobalSingleton.given_dokja = true
+		- Dont give kim dokja
+			Cylinder1: Idiot!
+			Cecilia: [[My bad | Sorry]]
+	else
+		Cylinder1: You dont even have kim dojka get out
+		Cecilia: Sorry
+
+=> END
+
+~ cylinder2
+
+Cecilia: Hello
+if GlobalSingleton.has_met_cyl2 == false
+	Cylinder2: Give kim dokja to my brother to talk to me
+	set GlobalSingleton.has_met_cyl2 = true
+else
+	if GlobalSingleton.has_won == true:
+		Cylinder2: Go away dont bother me now
+	else:
+		if GlobalSingleton.given_dokja == true
+			Cylinder2: Ok you have given kim dokja so now you win!
+			Cecilia: Yay!
+			do GlobalSingleton.victory()
+			set GlobalSingleton.has_won = true
+		else
+			Cylinder2: Go give kim dokja first u stupid
+			Cecilia: Ok
+
+=> END
+
+~ tutorial
+
+Doddaeji: You have to give kim dokja to cylinder 1 and then talk to cylinder 2 to win.
+
+=> END

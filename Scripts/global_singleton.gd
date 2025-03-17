@@ -7,6 +7,17 @@ var scene_node_idx: int = 2
 var ginventory: Array[invitem] = [invitem.new(), invitem.new(), invitem.new(), invitem.new(), invitem.new()]
 var ginvsize = 5
 
+#bedroom dialogues variables
+var has_met_cyl1 = false
+var given_dokja = false
+
+var has_met_cyl2 = false
+var has_won = false
+
+func victory():
+	print("You won!")
+	pass
+
 func check_inv(n: String, q: int) -> bool:
 	var player_inv: Inventory = get_tree().get_first_node_in_group("cec").get_node("Inventory")
 	return player_inv.check_inventory(n, q)
@@ -22,3 +33,4 @@ func use_eq_item():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+	

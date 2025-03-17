@@ -27,6 +27,8 @@ func _ready() -> void:
 	camspring = $Pivot/SpringArm3D
 	pivot = $Pivot
 	inv = $Inventory
+	await get_tree().create_timer(3).timeout
+	DialogueManager.show_example_dialogue_balloon(load("res://Dialogues/bedroom.dialogue"), "tutorial")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

@@ -6,6 +6,7 @@ script/source = "extends StaticBody3D
 
 func _on_detection_body_entered(body: Node3D) -> void:
 	if body.is_in_group(\"cec\"):
+		DialogueManager.show_example_dialogue_balloon(load(\"res://Dialogues/bedroom.dialogue\"), \"cylinder1\")
 		pass
 	pass # Replace with function body.
 "
