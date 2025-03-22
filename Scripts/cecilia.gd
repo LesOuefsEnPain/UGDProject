@@ -27,6 +27,7 @@ func _ready() -> void:
 	camspring = $Pivot/SpringArm3D
 	pivot = $Pivot
 	inv = $Inventory
+	GlobalSingleton.connect("dsignal", dialogue_signal_received)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -113,3 +114,9 @@ func cam_deinterpolate():
 	await wait.timeout
 	pivot.remove_child(cam)
 	camspring.add_child(cam)
+	
+func dialogue_signal_received(para: String):
+	if para == "givespeed":
+		SPEED += 10
+	pass
+	

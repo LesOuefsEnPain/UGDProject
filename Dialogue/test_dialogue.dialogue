@@ -1,0 +1,23 @@
+~ cyl1
+
+do change_pfp(allpfps[0])
+if has_met1 == false
+	% Kim Dokja: We haven't met before have we, I am KDJ
+	%2 Kim Dokja: I am gonna give you this S Grade item of super speed [do emit_signal("dsignal", "givespeed")]
+	set has_met1 = true
+else
+	do play_aud("res://Audio/crowd-applause-236697.mp3")
+	Kim Dokja: We have met before indeed
+	do change_pfp(allpfps[1])
+	Godot: You didn't meet me before!!!!!
+	do change_pfp(allpfps[0])
+	Kim Dokja: Im better!!
+	do change_pfp(allpfps[1])
+	Godot: You are alive right now because of me!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	Godot: I am gonna make you an item that cecilia is gonna hold
+	do add_inv_item("res://Objects/test_item.tscn")
+	do change_pfp(allpfps[0])
+	Kim Dokja: Im gonna turn u into an item as well
+	do add_inv_item("res://Objects/godotitem.tscn")
+
+=> END
