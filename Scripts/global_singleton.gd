@@ -7,6 +7,14 @@ var scene_node_idx: int = 2
 var ginventory: Array[invitem] = [invitem.new(), invitem.new(), invitem.new(), invitem.new(), invitem.new()]
 var ginvsize = 5
 
+#ma test variable dialogue
+var met_cyl1 = false
+var given_dokja = false
+var met_cyl2 = false
+var the_epilogue_perchance = false
+func victory():
+	pass
+
 func check_inv(n: String, q: int) -> bool:
 	var player_inv: Inventory = get_tree().get_first_node_in_group("cec").get_node("Inventory")
 	return player_inv.check_inventory(n, q)

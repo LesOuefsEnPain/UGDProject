@@ -1,0 +1,67 @@
+~ cyl1
+
+Cecilia: omgomg hiiii
+if GlobalSingleton.the_epilogue_perchance == true
+	Yoo Joonghyuk: Are you asking for a fight!?
+else
+	if GlobalSingleton.met_cyl1 == false
+		if GlobalSingleton.check_eq("Kim Dokja") == true
+			Yoo Joonghyuk: Do not listen to what this fool says.
+			Cecilia: Who?
+			set GlobalSingleton.met_cyl1 = true
+		else:
+			Secretive Plotter: I demand Kim Dokja.
+			Cecilia: [[Oh,|NO HE'S MINE,|Okay..|Why? you weirdo,]] but i guess i'll think about it
+			Yoo Joonghyuk: Don't you dare...
+			set GlobalSingleton.met_cyl1 = true
+		=> END
+	else
+		if GlobalSingleton.check_eq("Kim Dokja") == true
+			Secretive Plotter: So you have found him. Pass him over to me
+			Yoo Joonghyuk: No. You are to do no such thing.
+			- Give The Reader
+				Yoo Joonghyuk: You Fool. I WILL KILL YOU
+				Secretive Plotter: *is unimpressed* 
+				do GlobalSingleton.use_eq_item() 
+				set GlobalSingleton.given_dokja = true
+			- Don't
+				Secretive Plotter: Why, Why is it not me, but you??
+				=> END
+	if GlobalSingleton.given_dokja == true
+		Yoo Joonghyuk: *glares* 
+		 => END
+	else
+		Secretive Plotter: We meet again. Where is Kim Dokja?
+		Cecilia: Im still thinking
+=> END
+
+
+~ cyl2
+Cecilia: Helloo!!
+if GlobalSingleton.the_epilogue_perchance == true
+	Fedora Fan Boy: Thankyou- but like get lost. Don't ask abt the Wall.
+else
+	if GlobalSingleton.met_cyl1 == true 
+		if GlobalSingleton.met_cyl2 == false
+			4th Wall: They're a condescending bunch aren't they
+			Cecilia: ..Haha
+			set GlobalSingleton.met_cyl2 = true
+		if GlobalSingleton.check_eq("Kim Dokja") == true
+			4th Wall: K im D ok j a is an id i o t.
+		if GlobalSingleton.given_dokja == true
+			Fedora Fan Boy: But Alas, i am free and can find peace with that [[fool|idiot|squid|bastard|]] whisked off to the Plotter
+			Cecilia: Wait what happened to the Wall-
+			Fedora Fan Boy: shhhhh~ 
+			do GlobalSingleton.victory()
+			set GlobalSingleton.the_epilogue_perchance =true
+			=> END
+	else: 
+		4th Wall: ...
+
+=> END
+
+~ tutorial
+
+Kim Dokja: dude do whatever you want idc
+
+=> END
