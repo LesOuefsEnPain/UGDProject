@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://kcyibtjgema1"]
 
 [ext_resource type="Script" uid="uid://7bjrd6hr3rtg" path="res://Scripts/dress_inv.gd" id="1_u4kku"]
-[ext_resource type="Texture2D" uid="uid://bci5nmdyrtqv5" path="res://UI/Assets/white256.png" id="2_niusc"]
+[ext_resource type="Texture2D" uid="uid://ljupqm6ur57a" path="res://Sprites/dress_white.png" id="2_u4kku"]
 
 [node name="whitedress" type="Node3D"]
 script = ExtResource("1_u4kku")
 dress_type = "w"
 idname = "White Dress"
-itemtex = ExtResource("2_niusc")
+itemtex = ExtResource("2_u4kku")
 uses = 1
 metadata/_custom_type_script = "uid://7bjrd6hr3rtg"

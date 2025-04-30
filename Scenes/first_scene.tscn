@@ -35,7 +35,7 @@ glow_bloom = 0.26
 transform = Transform3D(-3.19093e-07, 0, 7.3, 0, 7.3, 0, -7.3, 0, -3.19093e-07, 0, 0, 0)
 
 [node name="Cecilia" parent="." instance=ExtResource("2_6o8jp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07819, 1.48758, -1.25988)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07819, -5.39214, 13.6151)
 SPEED = 14.0
 JUMP_VELOCITY = 15.0
 
@@ -56,3 +56,6 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -10.9392, -7.88742, 18.8164)
 
 [node name="cyl2" parent="." instance=ExtResource("5_eh6ij")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 10.1191, -7.88742, 18.8164)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.675559, 0.0904691, 0.731734, -0.0381041, 0.995401, -0.0878892, -0.73632, 0.0314923, 0.6759, 16.2358, -6.79992, -5.32941)
