@@ -6,7 +6,7 @@
 [node name="whitedress" type="Node3D"]
 script = ExtResource("1_u4kku")
 dress_type = "w"
-idname = "White Dress"
+idname = "Le Blanc"
 itemtex = ExtResource("2_u4kku")
 uses = 1
 metadata/_custom_type_script = "uid://7bjrd6hr3rtg"
