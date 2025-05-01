@@ -1,5 +1,22 @@
 ~ awake
 
+do change_pfp(allpfps[0])
+Cecilia: *mumbles* Jeez, I was about to reach the end of the rainbow
+Cecilia: YES VARICK! I AM AWAKE!
+Cecilia: *mumbles* I wonder when I will have such a wonderful dream again.
+do change_pfp(allpfps[1])
+Varick: Come on ma'am! We don't have all day.
+do change_pfp(allpfps[0])
+Cecilia: Yes I know duh! Stop bossing me around.
+do dsignal.emit("start")
 
+=> END
+
+~ instruction
+
+do change_pfp(allpfps[1])
+Varick: Grab some clothes from the wardrobe quick! You have a minute.
+do change_pfp(allpfps[0])
+Cecilia: Right at it sir.
 
 => END
