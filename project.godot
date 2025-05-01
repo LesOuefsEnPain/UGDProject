@@ -182,4 +182,4 @@ dialogic_default_action={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogue/test_dialogue.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogue/test_dialogue.dialogue", "res://Dialogue/bedroomFirst.dialogue")
