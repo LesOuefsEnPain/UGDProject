@@ -136,10 +136,10 @@ text = "Dialogue..."
 
 [node name="CharacterTn" type="TextureRect" parent="Balloon" groups=["chimage"]]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 289.0
-offset_right = 302.0
-offset_bottom = 642.0
+offset_left = 15.0
+offset_top = 255.0
+offset_right = 290.319
+offset_bottom = 653.0
 expand_mode = 3
 
 [node name="Responses" type="MarginContainer" parent="Balloon"]

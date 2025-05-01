@@ -209,3 +209,5 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 3
 metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Escape" to="." method="_on_escape_pressed"]
