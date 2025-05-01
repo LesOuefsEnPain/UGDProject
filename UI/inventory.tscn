@@ -46,6 +46,6 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("3_fxcd2")
 circle_coverage = 1.0
-icon_scale = 0.1
+icon_scale = 0.2
 
 [connection signal="item_selected" from="RadialMenu" to="." method="_on_radial_menu_item_selected"]

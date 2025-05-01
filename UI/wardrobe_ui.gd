@@ -102,3 +102,10 @@ func _on_button_pressed() -> void:
 	inventoryobj.add_item(wd)
 	handle_wardrobe()
 	pass # Replace with function body.
+
+
+func _on_escape_pressed() -> void:
+	GlobalSingleton.exitbtn.emit()
+	var wdrobe = get_tree().get_first_node_in_group("wardrobe")
+	wdrobe.close_w()
+	pass # Replace with function body.

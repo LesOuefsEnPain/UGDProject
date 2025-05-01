@@ -1,6 +1,7 @@
 extends Node
 
 signal dsignal(para: String)
+signal exitbtn
 
 #global variables here
 var can_player_move = true

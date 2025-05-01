@@ -5,8 +5,6 @@ var titlelabel: Label
 var desclabel: Label
 var imageobj: TextureRect
 
-signal closebtn
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	titlelabel = $ItemTitle
@@ -35,6 +33,6 @@ func close_screen():
 
 
 func _on_escape_pressed() -> void:
-	closebtn.emit()
+	GlobalSingleton.exitbtn.emit()
 	close_screen()
 	pass # Replace with function body.

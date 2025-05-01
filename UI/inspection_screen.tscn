@@ -14,7 +14,7 @@ shader_parameter/inner_radius = -0.47
 shader_parameter/outer_radius = 1.665
 shader_parameter/vignettecolor = Vector3(0.05, 0.05, 0.13)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdngf"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m20mm"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -26,7 +26,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4tw4w"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3r13h"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -47,7 +47,7 @@ expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onx3k"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tu3y6"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -63,7 +63,7 @@ corner_detail = 5
 shadow_color = Color(0.133333, 0.133333, 0.231373, 1)
 shadow_size = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hegt2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfqdw"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -79,7 +79,7 @@ corner_detail = 5
 shadow_color = Color(0.290196, 0.305882, 0.411765, 0.87451)
 shadow_size = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyo6a"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15vxn"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -115,11 +115,11 @@ Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("3_d5mct")
-Button/styles/disabled = SubResource("StyleBoxFlat_kdngf")
-Button/styles/focus = SubResource("StyleBoxFlat_4tw4w")
-Button/styles/hover = SubResource("StyleBoxFlat_onx3k")
-Button/styles/normal = SubResource("StyleBoxFlat_hegt2")
-Button/styles/pressed = SubResource("StyleBoxFlat_fyo6a")
+Button/styles/disabled = SubResource("StyleBoxFlat_m20mm")
+Button/styles/focus = SubResource("StyleBoxFlat_3r13h")
+Button/styles/hover = SubResource("StyleBoxFlat_tu3y6")
+Button/styles/normal = SubResource("StyleBoxFlat_gfqdw")
+Button/styles/pressed = SubResource("StyleBoxFlat_15vxn")
 
 [node name="InspectionScreen" type="Control"]
 modulate = Color(1, 1, 1, 0)
