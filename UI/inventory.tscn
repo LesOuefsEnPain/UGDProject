@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctydj4dejrkvr"]
+[gd_scene load_steps=5 format=3 uid="uid://ctydj4dejrkvr"]
 
 [ext_resource type="Script" uid="uid://prcqmhyolalu" path="res://Scripts/inventory.gd" id="1_23vm5"]
+[ext_resource type="Theme" uid="uid://cfjaar35cq38n" path="res://UI/text.tres" id="2_7g8kd"]
+[ext_resource type="Script" uid="uid://bwjly5yuwyf22" path="res://addons/RadialMenu/RadialMenu.gd" id="3_fxcd2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxcd2"]
+bg_color = Color(0.603922, 0.54902, 0.596078, 1)
+corner_radius_top_left = 100
 
 [node name="Inventory" type="Control" groups=["inventory"]]
 layout_mode = 3
@@ -19,18 +25,27 @@ anchor_left = 0.809896
 anchor_top = 0.850309
 anchor_right = 0.999132
 anchor_bottom = 1.0
-theme_override_font_sizes/font_size = 25
+theme = ExtResource("2_7g8kd")
+theme_override_colors/font_color = Color(0.94902, 0.913725, 0.894118, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_fxcd2")
 text = "Empty"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="AllItems" type="ItemList" parent="."]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.801215
-anchor_top = 0.611111
-anchor_right = 0.973958
-anchor_bottom = 0.978395
-metadata/_edit_use_anchors_ = true
+[node name="RadialMenu" type="Control" parent="."]
+visible = false
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 300.0
+offset_bottom = 300.0
+pivot_offset = Vector2(150, 150)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("3_fxcd2")
+circle_coverage = 1.0
+icon_scale = 0.1
+
+[connection signal="item_selected" from="RadialMenu" to="." method="_on_radial_menu_item_selected"]
