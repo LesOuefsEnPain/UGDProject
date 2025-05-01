@@ -16,6 +16,7 @@ func _ready() -> void:
 	keysprite = $keyinstruction
 	keysprite.visible = false
 	inspscreen = get_tree().root.get_child(GlobalSingleton.scene_node_idx).get_node("InspectionScreen")
+	GlobalSingleton.connect("exitbtn", closebtn)
 	pass # Replace with function body.
 
 
@@ -49,4 +50,7 @@ func detect_exit(body: Node3D):
 	if (body.is_in_group("cec")):
 		is_player_in = false
 		keysprite.visible = false
+		
+func closebtn():
+	is_interacted = false
 		

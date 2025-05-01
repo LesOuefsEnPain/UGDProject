@@ -1,6 +1,7 @@
 extends Node
 
 signal dsignal(para: String)
+signal exitbtn
 
 #global variables here
 var can_player_move = true
@@ -10,7 +11,7 @@ var ginventory: Array[invitem] = [invitem.new(), invitem.new(), invitem.new(), i
 var ginvsize = 5
 var aud_to_kill: AudioStreamPlayer
 
-var allpfps = ["res://Sprites/kdokja.png", "res://icon.svg"]
+var allpfps = ["res://Sprites/ceciliatest.png", "res://Sprites/VarrickThumbnail.png"]
 
 #put ur dialogue variables here and also put a comment of which dialogue variables are for
 var has_met1 = false

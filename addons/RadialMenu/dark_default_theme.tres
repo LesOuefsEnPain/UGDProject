@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://6txfgg00boom"]
+
+[ext_resource type="Texture2D" uid="uid://gldkkrkkc05i" path="res://addons/RadialMenu/icons/InterpLinear.svg" id="1"]
+
+[resource]
+default_font_size = 0
+RadialMenu/colors/Background = Color(0.133333, 0.133333, 0.231373, 1)
+RadialMenu/colors/CenterBackground = Color(0.133333, 0.133333, 0.231373, 1)
+RadialMenu/colors/CenterStroke = Color(0.290196, 0.305882, 0.411765, 1)
+RadialMenu/colors/ExpandIconModulation = Color(1, 1, 1, 1)
+RadialMenu/colors/IconModulation = Color(0.710938, 0.710938, 0.710938, 1)
+RadialMenu/colors/RingBackground = Color(0.290196, 0.305882, 0.411765, 1)
+RadialMenu/colors/RingStroke = Color(0.290196, 0.305882, 0.411765, 1)
+RadialMenu/colors/SelectedBackground = Color(0.788235, 0.678431, 0.654902, 1)
+RadialMenu/colors/SelectedStroke = Color(0.788235, 0.678431, 0.654902, 1)
+RadialMenu/colors/SelectorSegment = Color(0.52549, 0.784314, 1, 1)
+RadialMenu/colors/Stroke = Color(0.713726, 0.713726, 0.713726, 1)
+RadialMenu/constants/CenterRadius = 0
+RadialMenu/constants/DecoratorRingWidth = 5
+RadialMenu/constants/ItemRingWidth = 10
+RadialMenu/constants/RingStrokeWidth = 1
+RadialMenu/constants/SelectorSegmentWidth = 5
+RadialMenu/constants/StrokeWidth = 1
+RadialMenu/icons/Expand = ExtResource("1")

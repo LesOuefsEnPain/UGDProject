@@ -1,6 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://x3p5ip3lx58a"]
+[gd_scene load_steps=26 format=3 uid="uid://x3p5ip3lx58a"]
 
 [ext_resource type="Script" uid="uid://ct0ovk8ljfxas" path="res://UI/wardrobe_ui.gd" id="1_vricd"]
+[ext_resource type="Theme" uid="uid://8n4jwhu6fb6g" path="res://UI/title.tres" id="2_74r8d"]
+[ext_resource type="Theme" uid="uid://cfjaar35cq38n" path="res://UI/text.tres" id="3_5db1n"]
+[ext_resource type="Texture2D" uid="uid://ljupqm6ur57a" path="res://Sprites/dress_white.png" id="4_3q8tj"]
+[ext_resource type="Texture2D" uid="uid://cbxnee20bwxhe" path="res://Sprites/dress_blue.png" id="4_5db1n"]
+[ext_resource type="Texture2D" uid="uid://oo8s7go3s0v7" path="res://Sprites/dress_pink.png" id="5_cek27"]
+[ext_resource type="FontFile" uid="uid://d4nh8oc5a3mqt" path="res://Fonts/Larken-Serif-Trial/Larken Serif Trial/LarkenDEMO-Italic.otf" id="7_27mfx"]
+[ext_resource type="FontFile" uid="uid://c5vtyvllnkp8g" path="res://Fonts/quicksand/Quicksand-Regular.otf" id="8_gvhjr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5db1n"]
+bg_color = Color(0.133333, 0.133333, 0.231373, 1)
+corner_radius_top_left = 200
+corner_radius_top_right = 200
+corner_radius_bottom_right = 200
+corner_radius_bottom_left = 200
+corner_detail = 20
+shadow_color = Color(0.769293, 0.767583, 0.752432, 1)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmj4i"]
+bg_color = Color(0.133333, 0.133333, 0.231373, 1)
+corner_radius_top_left = 200
+corner_radius_top_right = 200
+corner_radius_bottom_right = 200
+corner_radius_bottom_left = 200
+corner_detail = 20
+shadow_color = Color(0.723496, 0.284163, 0.600141, 1)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_74r8d"]
+bg_color = Color(0.133333, 0.133333, 0.231373, 1)
+corner_radius_top_left = 200
+corner_radius_top_right = 200
+corner_radius_bottom_right = 200
+corner_radius_bottom_left = 200
+corner_detail = 20
+shadow_color = Color(0.450407, 0.454009, 0.663624, 1)
+shadow_size = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ludi7"]
 bg_color = Color(0.74902, 0.74902, 0.74902, 0)
@@ -11,6 +48,283 @@ bg_color = Color(0.972549, 0.623529, 0.811765, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cesb"]
 bg_color = Color(0.541176, 0.776471, 0.980392, 0)
 
+[sub_resource type="Animation" id="Animation_hmj4i"]
+resource_name = "Blue"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect3/Text:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 3, 5.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect3/Graphic:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 3, 5.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3q8tj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect3/Text:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect3/Graphic:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect2/Text:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect2/Graphic:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect/Text:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect/Graphic:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cek27"]
+resource_name = "Pink"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2/Text:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 3, 5.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2/Graphic:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.52, 3, 5.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_27mfx"]
+resource_name = "White"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/Text:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 3, 5.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect/Graphic:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 3, 5.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3q8tj"]
+_data = {
+&"Blue": SubResource("Animation_hmj4i"),
+&"Pink": SubResource("Animation_cek27"),
+&"RESET": SubResource("Animation_3q8tj"),
+&"White": SubResource("Animation_27mfx")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdngf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4tw4w"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onx3k"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.603922, 0.54902, 0.596078, 1)
+border_color = Color(0.133333, 0.133333, 0.231373, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+shadow_color = Color(0.133333, 0.133333, 0.231373, 1)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hegt2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.788235, 0.678431, 0.654902, 1)
+border_color = Color(0.133333, 0.133333, 0.231373, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+shadow_color = Color(0.290196, 0.305882, 0.411765, 0.87451)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyo6a"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.94902, 0.913725, 0.894118, 1)
+border_color = Color(0.133333, 0.133333, 0.231373, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+shadow_color = Color(0.290196, 0.305882, 0.411765, 0.87451)
+shadow_size = 20
+
+[sub_resource type="Theme" id="Theme_qli3b"]
+Button/colors/font_color = Color(0.94902, 0.913725, 0.894118, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.94902, 0.913725, 0.894118, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0.133333, 0.133333, 0.231373, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("7_27mfx")
+Button/styles/disabled = SubResource("StyleBoxFlat_kdngf")
+Button/styles/focus = SubResource("StyleBoxFlat_4tw4w")
+Button/styles/hover = SubResource("StyleBoxFlat_onx3k")
+Button/styles/normal = SubResource("StyleBoxFlat_hegt2")
+Button/styles/pressed = SubResource("StyleBoxFlat_fyo6a")
+
 [node name="WardrobeUI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -20,43 +334,237 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vricd")
 
-[node name="BackL" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0199653
-anchor_top = 0.0138889
-anchor_right = 0.107639
-anchor_bottom = 0.112654
-theme_override_font_sizes/font_size = 46
-text = "[Esc]"
-metadata/_edit_use_anchors_ = true
-
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="Panel" parent="."]
 visible = false
 layout_mode = 0
 offset_left = 24.0
 offset_top = 349.0
-offset_right = 279.0
-offset_bottom = 575.0
-color = Color(0.89059, 0.89059, 0.89059, 1)
+offset_right = 310.0
+offset_bottom = 616.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5db1n")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="Text" type="Control" parent="ColorRect"]
+layout_mode = 1
+anchor_left = 0.108392
+anchor_top = 0.093633
+anchor_right = 0.891608
+anchor_bottom = 0.917603
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="RichTextLabel" parent="ColorRect/Text"]
+layout_mode = 0
+anchor_left = -0.129464
+anchor_top = -0.15
+anchor_right = 1.13393
+anchor_bottom = 0.913636
+theme = ExtResource("2_74r8d")
+theme_override_font_sizes/normal_font_size = 60
+text = "Le
+Blanc"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Effect" type="RichTextLabel" parent="ColorRect/Text"]
+layout_mode = 0
+anchor_left = -0.142857
+anchor_top = 0.277273
+anchor_right = 1.12054
+anchor_bottom = 1.34091
+theme = ExtResource("3_5db1n")
+theme_override_font_sizes/normal_font_size = 30
+text = "+10 Stealth"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Graphic" type="Control" parent="ColorRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchor_left = 0.108392
+anchor_top = 0.093633
+anchor_right = 0.891608
+anchor_bottom = 0.917603
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/Graphic"]
+layout_mode = 0
+anchor_left = 0.109172
+anchor_top = -0.126033
+anchor_right = 0.868101
+anchor_bottom = 0.619422
+texture = ExtResource("4_3q8tj")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/Graphic"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0848214
+anchor_top = 0.554545
+anchor_right = 0.919643
+anchor_bottom = 1.10455
+theme = ExtResource("3_5db1n")
+text = "\"Playing hide and seek, nobody would find me\""
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="Panel" parent="."]
 visible = false
 layout_mode = 0
 offset_left = 857.0
 offset_top = 130.0
-offset_right = 1112.0
-offset_bottom = 356.0
-color = Color(0.958782, 0.701243, 0.89867, 1)
+offset_right = 1143.0
+offset_bottom = 397.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hmj4i")
 
-[node name="ColorRect3" type="ColorRect" parent="."]
+[node name="Text" type="Control" parent="ColorRect2"]
+layout_mode = 1
+anchor_left = 0.108392
+anchor_top = 0.093633
+anchor_right = 0.891608
+anchor_bottom = 0.917603
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="RichTextLabel" parent="ColorRect2/Text"]
+layout_mode = 0
+anchor_left = -0.129464
+anchor_top = -0.15
+anchor_right = 1.13393
+anchor_bottom = 0.913636
+theme = ExtResource("2_74r8d")
+theme_override_font_sizes/normal_font_size = 60
+text = "Coral y rosada"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Effect" type="RichTextLabel" parent="ColorRect2/Text"]
+layout_mode = 0
+anchor_left = -0.142857
+anchor_top = 0.277273
+anchor_right = 1.12054
+anchor_bottom = 1.34091
+theme = ExtResource("3_5db1n")
+theme_override_font_sizes/normal_font_size = 26
+text = "+2 Inventory Space"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Graphic" type="Control" parent="ColorRect2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchor_left = 0.108392
+anchor_top = 0.093633
+anchor_right = 0.891608
+anchor_bottom = 0.917603
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect2/Graphic"]
+layout_mode = 0
+anchor_left = 0.109172
+anchor_top = -0.126033
+anchor_right = 0.868101
+anchor_bottom = 0.619422
+texture = ExtResource("5_cek27")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect2/Graphic"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0714287
+anchor_top = 0.445455
+anchor_right = 0.90625
+anchor_bottom = 0.995455
+theme = ExtResource("3_5db1n")
+text = "\"Ooh extra pockets
+cannot complain\""
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="Panel" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 25.0
-offset_top = 96.0
-offset_right = 280.0
-offset_bottom = 322.0
-color = Color(0.721709, 0.869022, 0.98995, 1)
+anchor_left = 0.0217014
+anchor_top = 0.0848765
+anchor_right = 0.294792
+anchor_bottom = 0.538117
+offset_right = -28.6
+offset_bottom = -26.7
+scale = Vector2(1.1, 1.1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_74r8d")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Control" parent="ColorRect3"]
+anchors_preset = 0
+anchor_left = 0.108392
+anchor_top = 0.093633
+anchor_right = 0.891608
+anchor_bottom = 0.917603
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="RichTextLabel" parent="ColorRect3/Text"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0409903
+anchor_top = -0.121901
+anchor_right = 1.0974
+anchor_bottom = 0.941736
+theme = ExtResource("2_74r8d")
+theme_override_font_sizes/normal_font_size = 52
+text = "Cerulian Dress"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Effect" type="RichTextLabel" parent="ColorRect3/Text"]
+layout_mode = 0
+anchor_left = -0.142857
+anchor_top = 0.277273
+anchor_right = 1.12054
+anchor_bottom = 1.34091
+theme = ExtResource("3_5db1n")
+theme_override_font_sizes/normal_font_size = 30
+text = "+10 Speed"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Graphic" type="Control" parent="ColorRect3"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+anchor_left = 0.108392
+anchor_top = 0.093633
+anchor_right = 0.891608
+anchor_bottom = 0.917603
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect3/Graphic"]
+layout_mode = 0
+anchor_left = 0.109172
+anchor_top = -0.126033
+anchor_right = 0.868101
+anchor_bottom = 0.619422
+texture = ExtResource("4_5db1n")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect3/Graphic"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.080763
+anchor_top = 0.514463
+anchor_right = 0.915584
+anchor_bottom = 1.06446
+theme = ExtResource("3_5db1n")
+text = "\"Varick is never able to catch me when I wear these\""
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -99,6 +607,40 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_2cesb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2cesb")
 metadata/_edit_use_anchors_ = true
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3q8tj")
+}
+
+[node name="Escape" type="Button" parent="."]
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 63.0
+offset_bottom = 649.0
+theme = SubResource("Theme_qli3b")
+
+[node name="Label" type="Label" parent="Escape"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.227272
+anchor_top = 0.182
+anchor_right = 0.773
+anchor_bottom = 0.808642
+offset_left = 36.0
+offset_top = -27.936
+offset_right = 405.982
+offset_bottom = -398.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.231373, 1)
+theme_override_fonts/font = ExtResource("8_gvhjr")
+theme_override_font_sizes/font_size = 30
+text = "GO BACK (or press Escape)"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
@@ -108,3 +650,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="mouse_entered" from="Button3" to="." method="_on_button_3_mouse_entered"]
 [connection signal="mouse_exited" from="Button3" to="." method="_on_button_3_mouse_exited"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Escape" to="." method="_on_escape_pressed"]

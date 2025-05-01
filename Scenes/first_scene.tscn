@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://qdfu5job2rvo"]
+[gd_scene load_steps=16 format=3 uid="uid://qdfu5job2rvo"]
 
+[ext_resource type="Script" uid="uid://53qmlj2f8xdl" path="res://Scripts/ScenicScripts/first_scene.gd" id="1_pp4jd"]
 [ext_resource type="PackedScene" uid="uid://b6gu0v5l03o03" path="res://cecilia.tscn" id="2_6o8jp"]
 [ext_resource type="PackedScene" uid="uid://d0o53pixr3ww7" path="res://UI/inspection_screen.tscn" id="3_blbiu"]
+[ext_resource type="Texture2D" uid="uid://c1flrb08dh7td" path="res://Sprites/cecilia/walk_left/frame9.png" id="3_eh6ij"]
 [ext_resource type="PackedScene" uid="uid://dt4wuh61jwlwe" path="res://Objects/ceciliabedroom.tscn" id="4_bj21y"]
+[ext_resource type="Shader" uid="uid://huri7pchkbkb" path="res://UI/vignette.gdshader" id="5_pilgx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xhgav"]
 
@@ -27,10 +30,122 @@ glow_intensity = 6.27
 glow_strength = 0.34
 glow_bloom = 0.26
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eh6ij"]
+shader = ExtResource("5_pilgx")
+shader_parameter/alpha = 1.0
+shader_parameter/inner_radius = 0.0
+shader_parameter/outer_radius = 0.0
+shader_parameter/vignettecolor = Vector3(0.05, 0.05, 0.13)
+
+[sub_resource type="Animation" id="Animation_pilgx"]
+resource_name = "eye_lids"
+length = 11.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EyeLids:material:shader_parameter/outer_radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.7, 2.7, 3.76667, 4.76667, 5.96667, 7.16667, 8.16667, 8.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.226, 0.165, 0.6, 0.3, 1.605, 0.605, 2.12, 19.84]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(10.9667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_wake_dialogue"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_eh6ij"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EyeLids:material:shader_parameter/outer_radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0509804, 0.0509804, 0.129412, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2fa4l"]
+resource_name = "transitionin"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0509804, 0.0509804, 0.129412, 0), Color(0.0509804, 0.0509804, 0.129412, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kdu3h"]
+resource_name = "transitionout"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0509804, 0.0509804, 0.129412, 1), Color(0.0509804, 0.0509804, 0.129412, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2fa4l"]
+_data = {
+&"RESET": SubResource("Animation_eh6ij"),
+&"eye_lids": SubResource("Animation_pilgx"),
+&"transitionin": SubResource("Animation_2fa4l"),
+&"transitionout": SubResource("Animation_kdu3h")
+}
+
 [node name="FirstScene" type="Node3D"]
+script = ExtResource("1_pp4jd")
 
 [node name="ceciliabedroom" parent="." instance=ExtResource("4_bj21y")]
 transform = Transform3D(-3.19093e-07, 0, 7.3, 0, 7.3, 0, -7.3, 0, -3.19093e-07, 0, 0, 0)
+
+[node name="Cutscene1Cam" type="Camera3D" parent="."]
+transform = Transform3D(0.675559, 0.0904692, 0.731734, -0.0381041, 0.995401, -0.0878892, -0.73632, 0.0314923, 0.6759, 16.2358, -6.79992, -5.32941)
+
+[node name="Sprite3D" type="Sprite3D" parent="Cutscene1Cam"]
+transform = Transform3D(0.299307, 1.07927, 0, -1.07927, 0.299307, 0, 0, 0, 1.12, -6.424, -3.424, -11.829)
+texture = ExtResource("3_eh6ij")
 
 [node name="Cecilia" parent="." instance=ExtResource("2_6o8jp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07819, -5.39214, 13.6151)
@@ -47,7 +162,26 @@ shadow_enabled = true
 distance_fade_enabled = true
 omni_range = 239.305
 
+[node name="EyeLids" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_eh6ij")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Transition" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0509804, 0.0509804, 0.129412, 0)
+
 [node name="InspectionScreen" parent="." instance=ExtResource("3_blbiu")]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.675559, 0.0904691, 0.731734, -0.0381041, 0.995401, -0.0878892, -0.73632, 0.0314923, 0.6759, 16.2358, -6.79992, -5.32941)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_2fa4l")
+}
+autoplay = "eye_lids"

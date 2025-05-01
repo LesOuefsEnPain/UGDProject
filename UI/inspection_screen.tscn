@@ -1,7 +1,125 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0o53pixr3ww7"]
+[gd_scene load_steps=14 format=3 uid="uid://d0o53pixr3ww7"]
 
 [ext_resource type="Script" uid="uid://iscygs44cnyc" path="res://Scripts/inspection_screen.gd" id="1_86q6e"]
-[ext_resource type="Texture2D" uid="uid://dxbrwl5l5s4w" path="res://UI/Assets/vignette.png" id="1_xvrqv"]
+[ext_resource type="Shader" uid="uid://huri7pchkbkb" path="res://UI/vignette.gdshader" id="2_8ufm6"]
+[ext_resource type="FontFile" uid="uid://d4nh8oc5a3mqt" path="res://Fonts/Larken-Serif-Trial/Larken Serif Trial/LarkenDEMO-Italic.otf" id="3_d5mct"]
+[ext_resource type="Theme" uid="uid://8n4jwhu6fb6g" path="res://UI/title.tres" id="3_o180r"]
+[ext_resource type="FontFile" uid="uid://c5vtyvllnkp8g" path="res://Fonts/quicksand/Quicksand-Regular.otf" id="4_61yea"]
+[ext_resource type="Theme" uid="uid://cfjaar35cq38n" path="res://UI/text.tres" id="4_m20mm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d5mct"]
+shader = ExtResource("2_8ufm6")
+shader_parameter/alpha = 1.0
+shader_parameter/inner_radius = -0.47
+shader_parameter/outer_radius = 1.665
+shader_parameter/vignettecolor = Vector3(0.05, 0.05, 0.13)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m20mm"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3r13h"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tu3y6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.603922, 0.54902, 0.596078, 1)
+border_color = Color(0.133333, 0.133333, 0.231373, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+shadow_color = Color(0.133333, 0.133333, 0.231373, 1)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfqdw"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.788235, 0.678431, 0.654902, 1)
+border_color = Color(0.133333, 0.133333, 0.231373, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+shadow_color = Color(0.290196, 0.305882, 0.411765, 0.87451)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15vxn"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.94902, 0.913725, 0.894118, 1)
+border_color = Color(0.133333, 0.133333, 0.231373, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+shadow_color = Color(0.290196, 0.305882, 0.411765, 0.87451)
+shadow_size = 20
+
+[sub_resource type="Theme" id="Theme_61yea"]
+Button/colors/font_color = Color(0.94902, 0.913725, 0.894118, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.94902, 0.913725, 0.894118, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0.133333, 0.133333, 0.231373, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("3_d5mct")
+Button/styles/disabled = SubResource("StyleBoxFlat_m20mm")
+Button/styles/focus = SubResource("StyleBoxFlat_3r13h")
+Button/styles/hover = SubResource("StyleBoxFlat_tu3y6")
+Button/styles/normal = SubResource("StyleBoxFlat_gfqdw")
+Button/styles/pressed = SubResource("StyleBoxFlat_15vxn")
 
 [node name="InspectionScreen" type="Control"]
 modulate = Color(1, 1, 1, 0)
@@ -13,34 +131,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_86q6e")
 
-[node name="Back" type="ColorRect" parent="."]
-modulate = Color(1, 1, 1, 0.607843)
+[node name="EyeLids" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_d5mct")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="BackL" type="Label" parent="."]
-layout_mode = 0
-offset_left = 22.0
-offset_top = 21.0
-offset_right = 123.0
-offset_bottom = 85.0
-theme_override_font_sizes/font_size = 46
-text = "[Esc]"
-
-[node name="Vignette" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_xvrqv")
-expand_mode = 5
 
 [node name="ItemTitle" type="Label" parent="."]
 layout_mode = 1
@@ -50,6 +148,7 @@ anchor_top = 0.0108025
 anchor_right = 0.582465
 anchor_bottom = 0.151235
 grow_horizontal = 2
+theme = ExtResource("3_o180r")
 theme_override_font_sizes/font_size = 66
 text = "TITLE"
 horizontal_alignment = 1
@@ -63,10 +162,40 @@ anchor_top = 0.850309
 anchor_right = 0.736111
 anchor_bottom = 0.925927
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0.724643, 0.724643, 0.724643, 1)
+theme = ExtResource("4_m20mm")
 theme_override_font_sizes/font_size = 35
 text = "The item description will go here"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Escape" type="Button" parent="."]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 63.0
+offset_bottom = 649.0
+theme = SubResource("Theme_61yea")
+
+[node name="Label" type="Label" parent="Escape"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.227272
+anchor_top = 0.182
+anchor_right = 0.773
+anchor_bottom = 0.808642
+offset_left = 36.0
+offset_top = -27.936
+offset_right = 405.982
+offset_bottom = -398.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.231373, 1)
+theme_override_fonts/font = ExtResource("4_61yea")
+theme_override_font_sizes/font_size = 30
+text = "GO BACK (or press Escape)"
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="ItemImage" type="TextureRect" parent="."]
@@ -80,3 +209,5 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 3
 metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Escape" to="." method="_on_escape_pressed"]

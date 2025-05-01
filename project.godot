@@ -56,7 +56,7 @@ runtime/advanced/ignore_missing_state_values=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/RadialMenu/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/tnowe_extra_controls/plugin.cfg")
 
 [filesystem]
 
