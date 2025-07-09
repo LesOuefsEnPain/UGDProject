@@ -20,3 +20,14 @@ do change_pfp(allpfps[0])
 Cecilia: Right at it sir.
 
 => END
+
+~ continue
+
+do change_pfp(allpfps[1])
+Varick: Are you ready ma'am?
+do change_pfp(allpfps[0])
+Cecilia: Yep! All ready.
+do change_pfp(allpfps[1])
+Varick: Then we can leave now, please come outside.
+
+=> END

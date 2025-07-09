@@ -10,6 +10,8 @@ var currentitemtext: Label
 var islistopen = false
 var items = []
 
+signal item_used(itemname)
+
 func _ready() -> void:
 	invarr = GlobalSingleton.ginventory
 	invsize = GlobalSingleton.ginvsize
@@ -93,6 +95,7 @@ func verify_item_existence(idx: int):
 		
 		var result: bool = invarr[idx].use_item()
 		if result:
+			item_used.emit(invarr[idx].idname)
 			remove_item(idx)
 		else:
 			player.remove_child(invarr[idx])

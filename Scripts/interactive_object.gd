@@ -29,6 +29,9 @@ func _input(event: InputEvent) -> void:
 		if id == "wdrobe":
 			is_interacted = true
 			get_parent().open_w()
+		elif id == "door":
+			is_interacted = true
+			get_parent().go_out()
 		else:
 			is_interacted = true
 			inspscreen.open_screen(itemname, itemdesc, itemimage)
