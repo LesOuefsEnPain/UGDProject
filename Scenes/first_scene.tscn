@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://qdfu5job2rvo"]
+[gd_scene load_steps=14 format=3 uid="uid://qdfu5job2rvo"]
 
 [ext_resource type="Script" uid="uid://53qmlj2f8xdl" path="res://Scripts/ScenicScripts/first_scene.gd" id="1_pp4jd"]
 [ext_resource type="PackedScene" uid="uid://b6gu0v5l03o03" path="res://cecilia.tscn" id="2_6o8jp"]
@@ -6,29 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c1flrb08dh7td" path="res://Sprites/cecilia/walk_left/frame9.png" id="3_eh6ij"]
 [ext_resource type="PackedScene" uid="uid://dt4wuh61jwlwe" path="res://Objects/ceciliabedroom.tscn" id="4_bj21y"]
 [ext_resource type="Shader" uid="uid://huri7pchkbkb" path="res://UI/vignette.gdshader" id="5_pilgx"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xhgav"]
-
-[sub_resource type="Sky" id="Sky_jb4t4"]
-sky_material = SubResource("ProceduralSkyMaterial_xhgav")
-
-[sub_resource type="Environment" id="Environment_dp225"]
-background_mode = 1
-background_color = Color(0.758192, 0.758192, 0.758192, 1)
-background_energy_multiplier = 1.1
-sky = SubResource("Sky_jb4t4")
-ambient_light_color = Color(0.556953, 0.556953, 0.556953, 1)
-tonemap_mode = 2
-ssr_enabled = true
-ssao_enabled = true
-ssao_radius = 5.0
-ssil_enabled = true
-ssil_radius = 7.0
-ssil_intensity = 2.0
-glow_enabled = true
-glow_intensity = 6.27
-glow_strength = 0.34
-glow_bloom = 0.26
+[ext_resource type="PackedScene" uid="uid://deg8vld213vfv" path="res://Objects/corrineestatehallway/new_game_hallway.tscn" id="7_2fa4l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eh6ij"]
 shader = ExtResource("5_pilgx")
@@ -152,9 +130,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07819, -5.39214, 13.6151)
 SPEED = 14.0
 JUMP_VELOCITY = 15.0
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_dp225")
-
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85553, 10.4595)
 light_energy = 4.0
@@ -185,3 +160,25 @@ libraries = {
 &"": SubResource("AnimationLibrary_2fa4l")
 }
 autoplay = "eye_lids"
+
+[node name="New Game Hallway" parent="." instance=ExtResource("7_2fa4l")]
+transform = Transform3D(-4.37114e-07, 0, -10, 0, 10, 0, 10, 0, -4.37114e-07, -148.454, 0, 0)
+
+[node name="OmniLight3D" parent="New Game Hallway" index="113"]
+transform = Transform3D(0.1, 0, -4.44089e-16, 0, 0.1, 0, 4.44089e-16, 0, 0.1, 0.287026, 1.77801, -0.0302982)
+light_color = Color(0.850339, 0.822645, 0.729688, 1)
+light_energy = 1.3
+light_indirect_energy = 0.0
+omni_range = 68.69
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="New Game Hallway"]
+transform = Transform3D(0.1, 0, -4.44089e-16, 0, 0.1, 0, 4.44089e-16, 0, 0.1, 3.92238, 1.77801, -0.0302982)
+light_color = Color(0.850339, 0.822645, 0.729688, 1)
+light_energy = 1.3
+light_indirect_energy = 0.0
+omni_range = 68.69
+omni_attenuation = 0.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[editable path="New Game Hallway"]

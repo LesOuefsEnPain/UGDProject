@@ -58,10 +58,6 @@ runtime/advanced/ignore_missing_state_values=true
 
 enabled=PackedStringArray("res://addons/RadialMenu/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
 
-[filesystem]
-
-import/blender/enabled=false
-
 [global_group]
 
 cec=""
